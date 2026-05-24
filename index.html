@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Blood Pressure Policies</title>
+
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --card-bg: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #dc2626;
+      --primary-dark: #b91c1c;
+      --border: #e5e7eb;
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(220, 38, 38, 0.12), transparent 32%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 680px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 36px;
+    }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #ef4444, #b91c1c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 34px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 24px rgba(220, 38, 38, 0.28);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.05;
+      margin: 0 0 14px;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin: 0 0 32px;
+      line-height: 1.6;
+    }
+
+    .section-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin: 0 0 14px;
+      font-weight: 700;
+    }
+
+    .documents {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .document-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      text-decoration: none;
+      color: var(--text);
+      background: #ffffff;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .document-link:hover {
+      transform: translateY(-2px);
+      border-color: rgba(220, 38, 38, 0.35);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+    }
+
+    .document-link span {
+      font-weight: 650;
+      font-size: 1rem;
+    }
+
+    .document-link small {
+      color: var(--muted);
+      display: block;
+      margin-top: 4px;
+      font-weight: 400;
+    }
+
+    .arrow {
+      color: var(--primary);
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .public-urls {
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .url-row {
+      margin: 0 0 14px;
+      line-height: 1.5;
+      word-break: break-word;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .url-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .url-row strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .url-row a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .url-row a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 520px) {
+      .card {
+        padding: 28px 22px;
+        border-radius: 24px;
+      }
+
+      .document-link {
+        align-items: flex-start;
+      }
+
+      .app-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="card" aria-labelledby="page-title">
+      <div class="app-icon" aria-hidden="true">BP</div>
+
+      <h1 id="page-title">Simple Blood Pressure Policies</h1>
+
+      <p class="subtitle">
+        Public policy documents for the Simple Blood Pressure iOS app.
+        You can view the Privacy Policy and Terms of Service below.
+      </p>
+
+      <h2 class="section-title">Documents</h2>
+
+      <div class="documents">
+        <a class="document-link" href="./privacy-policy.md">
+          <div>
+            <span>Privacy Policy</span>
+            <small>How user data is handled and protected.</small>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+        </a>
+
+        <a class="document-link" href="./terms-of-service.md">
+          <div>
+            <span>Terms of Service</span>
+            <small>Rules and conditions for using the app.</small>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+        </a>
+      </div>
+
+      <h2 class="section-title">Public URLs</h2>
+
+      <div class="public-urls">
+        <p class="url-row">
+          <strong>Privacy Policy</strong>
+          <a href="https://simplebp.nodenetlabs.com/privacy-policy.md">
+            https://simplebp.nodenetlabs.com/privacy-policy.md
+          </a>
+        </p>
+
+        <p class="url-row">
+          <strong>Terms of Service</strong>
+          <a href="https://simplebp.nodenetlabs.com/terms-of-service.md">
+            https://simplebp.nodenetlabs.com/terms-of-service.md
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © Simple Blood Pressure. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
