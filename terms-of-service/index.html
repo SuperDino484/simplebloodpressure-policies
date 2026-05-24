@@ -1,50 +1,505 @@
-<section>
-  <h2>6. No Liability for Injury, Misuse, or Harm</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service | Simple Blood Pressure</title>
 
-  <div class="highlight">
-    <p>
-      To the fullest extent permitted by applicable law, Simple Blood Pressure, its developer, owner, affiliates,
-      representatives, and related parties are not liable at all for any injury, harm, loss, damage, claim, medical
-      outcome, health issue, death, data loss, or other consequence arising from or related to your use of, inability
-      to use, reliance on, or misuse of the app.
-    </p>
-  </div>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --card-bg: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #dc2626;
+      --primary-dark: #b91c1c;
+      --soft-red: #fef2f2;
+      --border: #e5e7eb;
+      --warning-bg: #fff7ed;
+      --warning-border: #fed7aa;
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
 
-  <p>
-    This includes, without limitation, any injury, illness, worsening health, medical emergency, delayed medical care,
-    failure to seek medical care, incorrect interpretation of information, incorrect data entry, reliance on blood
-    pressure readings or trends, medication decisions, treatment decisions, lifestyle decisions, misuse of the app,
-    unauthorized use of the app, device issues, iCloud issues, sync issues, software bugs, data loss, data corruption,
-    or app errors.
-  </p>
+    * {
+      box-sizing: border-box;
+    }
 
-  <p>
-    You agree that you use Simple Blood Pressure entirely at your own risk. You are solely responsible for how you use
-    the app, how you interpret any information in the app, and any decisions or actions you take based on the app.
-  </p>
+    html {
+      scroll-behavior: smooth;
+    }
 
-  <p>
-    Simple Blood Pressure is not responsible for any misuse of the app by you or by any other person, including use for
-    medical, emergency, diagnostic, treatment, monitoring, or decision-making purposes.
-  </p>
-</section>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(220, 38, 38, 0.12), transparent 32%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 32px 16px;
+    }
 
-<section>
-  <h2>7. Use Prohibited Where Liability Limits Are Not Enforceable</h2>
+    main {
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+    }
 
-  <p>
-    Simple Blood Pressure is offered only in jurisdictions where the disclaimers, warranty exclusions, and liability
-    limitations in these Terms are permitted and enforceable.
-  </p>
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
 
-  <p>
-    If the laws of your country, state, province, territory, or other jurisdiction do not allow these disclaimers,
-    warranty exclusions, or liability limitations to apply as written, then you are not permitted to download, access,
-    or use Simple Blood Pressure.
-  </p>
+    .hero {
+      padding: 42px 42px 32px;
+      border-bottom: 1px solid var(--border);
+      background:
+        linear-gradient(135deg, rgba(220, 38, 38, 0.08), rgba(255, 255, 255, 0)),
+        #ffffff;
+    }
 
-  <p>
-    Where any limitation cannot be fully excluded despite the restriction above, liability is limited to the maximum
-    extent permitted by applicable law.
-  </p>
-</section>
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 650;
+      margin-bottom: 24px;
+    }
+
+    .back-link:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--soft-red);
+      color: var(--primary-dark);
+      border: 1px solid rgba(220, 38, 38, 0.18);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .badge-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 3.4rem);
+      line-height: 1.05;
+      margin: 0 0 16px;
+      letter-spacing: -0.045em;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 720px;
+      margin: 0;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .meta-item {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px 18px;
+    }
+
+    .meta-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 750;
+      margin-bottom: 4px;
+    }
+
+    .meta-item strong {
+      font-size: 1rem;
+    }
+
+    .content {
+      padding: 10px 42px 42px;
+    }
+
+    section {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      line-height: 1.25;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 14px 0 0;
+      padding-left: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 28px;
+      color: var(--text);
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      top: 0;
+      color: var(--primary);
+      font-weight: 900;
+    }
+
+    .highlight {
+      background: var(--soft-red);
+      border: 1px solid rgba(220, 38, 38, 0.18);
+      border-radius: 18px;
+      padding: 18px;
+      margin-top: 16px;
+    }
+
+    .warning {
+      background: var(--warning-bg);
+      border: 1px solid var(--warning-border);
+      border-radius: 18px;
+      padding: 18px;
+      margin-top: 16px;
+    }
+
+    .warning strong,
+    .highlight strong {
+      color: var(--text);
+    }
+
+    a {
+      color: var(--primary);
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 22px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 20px 12px;
+      }
+
+      .card {
+        border-radius: 24px;
+      }
+
+      .hero {
+        padding: 30px 22px 26px;
+      }
+
+      .content {
+        padding: 4px 22px 30px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 24px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article class="card">
+      <header class="hero">
+        <a class="back-link" href="/">← Back to Policies</a>
+
+        <div class="app-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Simple Blood Pressure
+        </div>
+
+        <h1>Terms of Service</h1>
+
+        <p class="intro">
+          These Terms govern your use of Simple Blood Pressure. By downloading, accessing, or using the app, you agree
+          to these Terms. If you do not agree, or if these Terms are not permitted or enforceable where you are located,
+          do not use the app.
+        </p>
+
+        <div class="meta" aria-label="Terms details">
+          <div class="meta-item">
+            <span>Effective Date</span>
+            <strong>May 23, 2026</strong>
+          </div>
+
+          <div class="meta-item">
+            <span>App Name</span>
+            <strong>Simple Blood Pressure</strong>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <section>
+          <h2>1. Purpose of the App</h2>
+          <p>
+            Simple Blood Pressure is provided only for personal tracking and informational purposes. The app allows you
+            to record and view blood pressure-related information that you choose to enter.
+          </p>
+
+          <div class="warning">
+            <p>
+              <strong>Simple Blood Pressure is not a medical device.</strong> It does not provide medical advice,
+              diagnosis, treatment, recommendations, emergency guidance, clinical interpretation, or health monitoring.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2>2. No Medical Advice</h2>
+          <p>
+            Information shown in the app must not be relied on as medical advice or as a substitute for professional
+            healthcare judgment.
+          </p>
+
+          <p>
+            Always consult a qualified healthcare professional about blood pressure concerns, symptoms, medication,
+            treatment, lifestyle changes, or medical decisions.
+          </p>
+        </section>
+
+        <section>
+          <h2>3. Emergencies</h2>
+          <p>
+            Simple Blood Pressure is not intended for emergencies. If you believe you may be experiencing a medical
+            emergency, call emergency services immediately or seek urgent medical attention.
+          </p>
+
+          <p>
+            Do not rely on the app during an emergency.
+          </p>
+        </section>
+
+        <section>
+          <h2>4. Your Responsibility</h2>
+          <p>
+            You use Simple Blood Pressure entirely at your own risk. You are solely responsible for:
+          </p>
+
+          <ul>
+            <li>The information you enter into the app</li>
+            <li>How you interpret or use information displayed by the app</li>
+            <li>Any health, medical, medication, lifestyle, or treatment decisions you make</li>
+            <li>Seeking professional medical advice when needed</li>
+            <li>Contacting emergency services in a medical emergency</li>
+            <li>Protecting your device, Apple ID, iCloud account, and app data</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>5. No Warranty</h2>
+          <p>
+            Simple Blood Pressure is provided on an <strong>“as is”</strong> and <strong>“as available”</strong> basis,
+            without warranties of any kind, whether express, implied, statutory, or otherwise.
+          </p>
+
+          <p>
+            We do not guarantee that the app will be accurate, complete, reliable, available, error-free, uninterrupted,
+            secure, compatible with all devices, or free from data loss, corruption, bugs, delays, sync issues, or other
+            problems.
+          </p>
+        </section>
+
+        <section>
+          <h2>6. No Liability for Injury, Misuse, or Harm</h2>
+
+          <div class="highlight">
+            <p>
+              To the fullest extent permitted by applicable law, Simple Blood Pressure, its developer, owner, affiliates,
+              representatives, and related parties are not liable at all for any injury, harm, loss, damage, claim,
+              medical outcome, health issue, death, data loss, or other consequence arising from or related to your use
+              of, inability to use, reliance on, or misuse of the app.
+            </p>
+          </div>
+
+          <p>
+            This includes, without limitation, any injury, illness, worsening health, medical emergency, delayed medical
+            care, failure to seek medical care, incorrect interpretation of information, incorrect data entry, reliance
+            on blood pressure readings or trends, medication decisions, treatment decisions, lifestyle decisions, misuse
+            of the app, unauthorized use of the app, device issues, iCloud issues, sync issues, software bugs, data
+            loss, data corruption, or app errors.
+          </p>
+
+          <p>
+            You agree that you use Simple Blood Pressure entirely at your own risk. You are solely responsible for how
+            you use the app, how you interpret any information in the app, and any decisions or actions you take based
+            on the app.
+          </p>
+
+          <p>
+            Simple Blood Pressure is not responsible for any misuse of the app by you or by any other person, including
+            use for medical, emergency, diagnostic, treatment, monitoring, or decision-making purposes.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. Use Prohibited Where Liability Limits Are Not Enforceable</h2>
+
+          <p>
+            Simple Blood Pressure is offered only in jurisdictions where the disclaimers, warranty exclusions, and
+            liability limitations in these Terms are permitted and enforceable.
+          </p>
+
+          <p>
+            If the laws of your country, state, province, territory, or other jurisdiction do not allow these
+            disclaimers, warranty exclusions, or liability limitations to apply as written, then you are not permitted
+            to download, access, or use Simple Blood Pressure.
+          </p>
+
+          <p>
+            Where any limitation cannot be fully excluded despite the restriction above, liability is limited to the
+            maximum extent permitted by applicable law.
+          </p>
+        </section>
+
+        <section>
+          <h2>8. Your Data</h2>
+          <p>
+            Your data is stored locally on your device and, if enabled, in your private iCloud account. You are
+            responsible for maintaining access to and backups of your own data.
+          </p>
+
+          <p>
+            We are not responsible for data loss, deletion, corruption, failed syncing, iCloud settings, device damage,
+            account issues, or loss of access to your device or Apple ID.
+          </p>
+
+          <p>
+            For more information, review the <a href="../privacy-policy/">Privacy Policy</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>9. Acceptable Use</h2>
+          <p>You agree not to use the app in a way that:</p>
+
+          <ul>
+            <li>Violates any law or regulation</li>
+            <li>Interferes with or disrupts the app</li>
+            <li>Attempts to reverse engineer, copy, modify, or redistribute the app except as permitted by law</li>
+            <li>Uses the app for unlawful, harmful, misleading, medical, or emergency purposes</li>
+            <li>Relies on the app as a replacement for professional medical care</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>10. Intellectual Property</h2>
+          <p>
+            Simple Blood Pressure, including its design, features, text, graphics, code, and other content, is owned by
+            its developer or licensed to the developer and is protected by applicable intellectual property laws.
+          </p>
+
+          <p>
+            You are granted a limited, personal, non-exclusive, non-transferable, revocable license to use the app for
+            personal, non-commercial purposes in accordance with these Terms.
+          </p>
+        </section>
+
+        <section>
+          <h2>11. Third-Party Services</h2>
+          <p>
+            The app may rely on Apple services, including iCloud, device storage, operating system features, and the App
+            Store. We are not responsible for Apple services, iCloud availability, device settings, operating system
+            behavior, third-party terms, third-party privacy practices, or issues caused by third-party services.
+          </p>
+        </section>
+
+        <section>
+          <h2>12. Changes and Termination</h2>
+          <p>
+            We may update, modify, suspend, or discontinue the app at any time without notice. We may also update these
+            Terms from time to time. Continued use of the app after changes are posted means you accept the updated
+            Terms.
+          </p>
+
+          <p>
+            We may suspend or terminate access to the app if you violate these Terms or use the app in a harmful,
+            unlawful, or inappropriate way. You may stop using the app at any time by deleting it from your device.
+          </p>
+        </section>
+
+        <section>
+          <h2>13. Governing Law</h2>
+          <p>
+            These Terms are governed by the laws applicable in the jurisdiction where the app developer is located,
+            unless otherwise required by applicable consumer protection laws.
+          </p>
+        </section>
+
+        <section>
+          <h2>14. Contact</h2>
+          <p>
+            No contact email is currently provided.
+          </p>
+        </section>
+      </div>
+    </article>
+
+    <footer>
+      © Simple Blood Pressure. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
