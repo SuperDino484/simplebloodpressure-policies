@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Simple Blood Pressure</title>
+
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --card-bg: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #dc2626;
+      --primary-dark: #b91c1c;
+      --soft-red: #fef2f2;
+      --border: #e5e7eb;
+      --warning-bg: #fff7ed;
+      --warning-border: #fed7aa;
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(220, 38, 38, 0.12), transparent 32%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 32px 16px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 42px 42px 32px;
+      border-bottom: 1px solid var(--border);
+      background:
+        linear-gradient(135deg, rgba(220, 38, 38, 0.08), rgba(255, 255, 255, 0)),
+        #ffffff;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 650;
+      margin-bottom: 24px;
+    }
+
+    .back-link:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--soft-red);
+      color: var(--primary-dark);
+      border: 1px solid rgba(220, 38, 38, 0.18);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .badge-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 3.4rem);
+      line-height: 1.05;
+      margin: 0 0 16px;
+      letter-spacing: -0.045em;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 720px;
+      margin: 0;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .meta-item {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px 18px;
+    }
+
+    .meta-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 750;
+      margin-bottom: 4px;
+    }
+
+    .meta-item strong {
+      font-size: 1rem;
+    }
+
+    .content {
+      padding: 10px 42px 42px;
+    }
+
+    section {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      line-height: 1.25;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 14px 0 0;
+      padding-left: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 28px;
+      color: var(--text);
+    }
+
+    li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    .highlight {
+      background: var(--soft-red);
+      border: 1px solid rgba(220, 38, 38, 0.18);
+      border-radius: 18px;
+      padding: 18px;
+      margin-top: 16px;
+    }
+
+    .warning {
+      background: var(--warning-bg);
+      border: 1px solid var(--warning-border);
+      border-radius: 18px;
+      padding: 18px;
+      margin-top: 16px;
+    }
+
+    .warning strong,
+    .highlight strong {
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 22px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 20px 12px;
+      }
+
+      .card {
+        border-radius: 24px;
+      }
+
+      .hero {
+        padding: 30px 22px 26px;
+      }
+
+      .content {
+        padding: 4px 22px 30px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 24px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article class="card">
+      <header class="hero">
+        <a class="back-link" href="./index.html">← Back to Policies</a>
+
+        <div class="app-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Simple Blood Pressure
+        </div>
+
+        <h1>Privacy Policy</h1>
+
+        <p class="intro">
+          Your privacy is extremely important to us. Simple Blood Pressure is designed so that your blood pressure and
+          health-related data remain private, under your control, and inaccessible to us.
+        </p>
+
+        <div class="meta" aria-label="Policy details">
+          <div class="meta-item">
+            <span>Effective Date</span>
+            <strong>May 23, 2026</strong>
+          </div>
+
+          <div class="meta-item">
+            <span>App Name</span>
+            <strong>Simple Blood Pressure</strong>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <section>
+          <h2>1. Overview</h2>
+          <p>
+            Simple Blood Pressure helps you record and manage blood pressure-related information. The app is built with
+            a privacy-first approach.
+          </p>
+
+          <div class="highlight">
+            <p>
+              We do <strong>not</strong> collect, access, sell, share, or transmit your personal health data to our servers.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2>2. Data We Do Not Collect</h2>
+          <p>We do not collect or have access to:</p>
+
+          <ul>
+            <li>Blood pressure readings</li>
+            <li>Heart rate entries</li>
+            <li>Notes or symptoms you enter</li>
+            <li>Medication information</li>
+            <li>Health history</li>
+            <li>Personal identifiers linked to your health data</li>
+            <li>Analytics tied to your health records</li>
+            <li>Any other data you enter into the app</li>
+          </ul>
+
+          <p class="highlight">
+            Your data stays private and is not visible to us.
+          </p>
+        </section>
+
+        <section>
+          <h2>3. Where Your Data Is Stored</h2>
+          <p>
+            Your data is stored locally on your device.
+          </p>
+
+          <p>
+            If you choose to use Apple iCloud, your data may also be stored in your own private iCloud account for
+            syncing and backup purposes. This iCloud storage is controlled by you and governed by Apple’s iCloud terms
+            and privacy practices.
+          </p>
+
+          <p>
+            We do not operate cloud servers for storing your blood pressure data, and we do not have access to your
+            private iCloud data.
+          </p>
+        </section>
+
+        <section>
+          <h2>4. iCloud Sync</h2>
+          <p>
+            If iCloud sync is enabled, your app data may sync between your Apple devices using your personal iCloud
+            account.
+          </p>
+
+          <p>
+            We cannot view, retrieve, modify, or delete your iCloud data. Access to iCloud data is controlled by your
+            Apple ID, device settings, and Apple’s security systems.
+          </p>
+
+          <p>
+            You can manage iCloud access at any time through your device settings.
+          </p>
+        </section>
+
+        <section>
+          <h2>5. No Analytics or Tracking</h2>
+          <p>
+            Simple Blood Pressure does not use analytics, tracking tools, advertising identifiers, or third-party
+            analytics services.
+          </p>
+
+          <p>
+            We do not track how you use the app.
+          </p>
+        </section>
+
+        <section>
+          <h2>6. No Sale or Sharing of Data</h2>
+          <p>
+            We do not sell, rent, trade, or share your personal data or health data with third parties.
+          </p>
+
+          <p>
+            Because we do not have access to your blood pressure data, we cannot use it for advertising, profiling,
+            analytics, or marketing.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. Apple Health</h2>
+          <p>
+            Simple Blood Pressure does not currently integrate with Apple Health.
+          </p>
+
+          <p>
+            If Apple Health integration is added in the future, the app will only access or write Apple Health data with
+            your explicit permission through Apple’s permission system. You will be able to manage or revoke those
+            permissions through your device settings.
+          </p>
+        </section>
+
+        <section>
+          <h2>8. Permissions</h2>
+          <p>
+            The app may request permissions only when needed for app functionality, such as access to iCloud.
+          </p>
+
+          <p>
+            You can allow, deny, or revoke permissions at any time through your device settings.
+          </p>
+        </section>
+
+        <section>
+          <h2>9. Children’s Privacy</h2>
+          <p>
+            The app is not intended for use by children under the age required by applicable law. We do not knowingly
+            collect personal information from children.
+          </p>
+        </section>
+
+        <section>
+          <h2>10. Data Security</h2>
+          <p>
+            Because your health data is stored locally on your device and, if enabled, in your private iCloud account,
+            protecting your device and Apple ID is important.
+          </p>
+
+          <p>
+            We recommend that you use device passcodes, biometric authentication, two-factor authentication for your
+            Apple ID, and regular software updates.
+          </p>
+        </section>
+
+        <section>
+          <h2>11. Data Deletion</h2>
+          <p>
+            You can delete your data at any time by deleting entries within the app or removing the app from your device.
+          </p>
+
+          <p>
+            If your data is synced with iCloud, you may also need to delete associated iCloud data through your Apple
+            device settings.
+          </p>
+
+          <p>
+            We cannot delete your data for you because we do not have access to it.
+          </p>
+        </section>
+
+        <section>
+          <h2>12. Medical Disclaimer</h2>
+
+          <div class="warning">
+            <p>
+              Simple Blood Pressure is intended for personal tracking and informational purposes only. It is not a
+              medical device and does not provide medical advice, diagnosis, or treatment.
+            </p>
+
+            <p>
+              Always consult a qualified healthcare professional regarding blood pressure concerns, symptoms, medication,
+              or medical decisions.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2>13. Changes to This Privacy Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time. If changes are made, the updated policy will be posted
+            with a new effective date.
+          </p>
+        </section>
+
+        <section>
+          <h2>14. Contact</h2>
+          <p>
+            No contact email is currently provided.
+          </p>
+        </section>
+      </div>
+    </article>
+
+    <footer>
+      © Simple Blood Pressure. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
